@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "PeregrineAI",
+  "version": "0.1",
+  "permissions": ["activeTab", "contextMenus", "scripting", "tabs", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "PeregrineAILogo.png",
+    "48": "PeregrineAILogo.png",
+    "128": "PeregrineAILogo.png"
+  }
+}
